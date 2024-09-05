@@ -20,11 +20,11 @@ public:
     StringInstrument(string name, int year, int strings) : Instrument(name, year), countStrings(strings) {};
 
     void playSound() const override {
-        cout << name << " ç " << countStrings << " ñòðóíàìè ãðàº ìåëîä³þ." << endl;
+        cout << name << " Ã§ " << countStrings << " Ã±Ã²Ã°Ã³Ã­Ã Ã¬Ã¨ Ã£Ã°Ã Âº Ã¬Ã¥Ã«Ã®Ã¤Â³Ã¾." << endl;
     }
 
     void adjustVolume() const override {
-        cout << "Ðåãóëþâàííÿ ãó÷íîñò³ ñòðóííîãî ³íñòðóìåíòà: " << name << endl;
+        cout << "ÃÃ¥Ã£Ã³Ã«Ã¾Ã¢Ã Ã­Ã­Ã¿ Ã£Ã³Ã·Ã­Ã®Ã±Ã²Â³ Ã±Ã²Ã°Ã³Ã­Ã­Ã®Ã£Ã® Â³Ã­Ã±Ã²Ã°Ã³Ã¬Ã¥Ã­Ã²Ã : " << name << endl;
     }
 };
 
@@ -35,11 +35,11 @@ public:
     WindInstrument(string name, int year, string type) :Instrument(name, year), typeOfAirVent(type) {};
 
     void playSound() const override {
-        cout << name << " ç îòâîðîì äëÿ âèäóâàííÿ: " << typeOfAirVent << " âèäàº çâóê." << endl;
+        cout << name << " Ã§ Ã®Ã²Ã¢Ã®Ã°Ã®Ã¬ Ã¤Ã«Ã¿ Ã¢Ã¨Ã¤Ã³Ã¢Ã Ã­Ã­Ã¿: " << typeOfAirVent << " Ã¢Ã¨Ã¤Ã Âº Ã§Ã¢Ã³Ãª." << endl;
     }
 
     void adjustVolume() const override {
-        cout << "Ðåãóëþâàííÿ ãó÷íîñò³ äóõîâîãî ³íñòðóìåíòà : " << name << endl;
+        cout << "ÃÃ¥Ã£Ã³Ã«Ã¾Ã¢Ã Ã­Ã­Ã¿ Ã£Ã³Ã·Ã­Ã®Ã±Ã²Â³ Ã¤Ã³ÃµÃ®Ã¢Ã®Ã£Ã® Â³Ã­Ã±Ã²Ã°Ã³Ã¬Ã¥Ã­Ã²Ã  : " << name << endl;
     }
 };
 
@@ -51,11 +51,11 @@ public:
         : Instrument(name, year), typeOfImpactor(Impactor) {}
 
     void playSound() const override {
-        cout << name << " ç óäàðíîþ ïîâåðõíåþ: " << typeOfImpactor << " âèäàº óäàð." << endl;
+        cout << name << " Ã§ Ã³Ã¤Ã Ã°Ã­Ã®Ã¾ Ã¯Ã®Ã¢Ã¥Ã°ÃµÃ­Ã¥Ã¾: " << typeOfImpactor << " Ã¢Ã¨Ã¤Ã Âº Ã³Ã¤Ã Ã°." << endl;
     }
 
     void adjustVolume() const override {
-        cout << "Ðåãóëþâàííÿ ãó÷íîñò³ óäàðíîãî ³íñòðóìåíòà: " << name << endl;
+        cout << "ÃÃ¥Ã£Ã³Ã«Ã¾Ã¢Ã Ã­Ã­Ã¿ Ã£Ã³Ã·Ã­Ã®Ã±Ã²Â³ Ã³Ã¤Ã Ã°Ã­Ã®Ã£Ã® Â³Ã­Ã±Ã²Ã°Ã³Ã¬Ã¥Ã­Ã²Ã : " << name << endl;
     }
 };
 int main()
@@ -63,13 +63,13 @@ int main()
     setlocale(LC_ALL, "");
     Instrument* list[3];
 
-    list[0] = new StringInstrument("Ã³òàðà", 1550, 6);
-    list[1] = new WindInstrument("Ôëåéòà", 1700, "Ãóáíèé îòâ³ð");
-    list[2] = new PercussionInstrument("Áàðàáàí", 2000, "Øê³ðÿíà ìåìáðàíà");
+    list[0] = new StringInstrument("ÃƒÂ³Ã²Ã Ã°Ã ", 1550, 6);
+    list[1] = new WindInstrument("Ã”Ã«Ã¥Ã©Ã²Ã ", 1700, "ÃƒÃ³Ã¡Ã­Ã¨Ã© Ã®Ã²Ã¢Â³Ã°");
+    list[2] = new PercussionInstrument("ÃÃ Ã°Ã Ã¡Ã Ã­", 2000, "Ã˜ÃªÂ³Ã°Ã¿Ã­Ã  Ã¬Ã¥Ã¬Ã¡Ã°Ã Ã­Ã ");
 
     for (int i = 0; i < 3; ++i) {
         list[i]->playSound();
         list[i]->adjustVolume();
-        std::cout << std::endl;
+        cout << endl;
     }
 }
